@@ -2,21 +2,21 @@ import React from 'react';
 import './ChefCard.css'
 import { FaHeart } from 'react-icons/fa';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const ChefCard = ({chef}) => {
-    console.log(chef)
-    const{picture_url, name, likes, years_of_experience, num_recipes } = chef;
+    const{id,picture_url, name, likes, years_of_experience, num_recipes } = chef;
     return (
-        <div className='container p-5 col-sm col-md-4 bg-body-tertiary rounded shadow-lg bgCard'>
+        <div className='container p-5 my-5 col-12 col-lg-3 bg-body-tertiary rounded shadow-lg bgCard'>
             <div>
-            <img className='chef-image' src={picture_url} alt="" />
+            <img className='chef-image mb-3' src={picture_url} alt="" />
             </div>
-            <h3 className='fs-3'>{name}</h3>
-            <h4>Years of experience: {years_of_experience}</h4>
-            <h4>Recipes Developed:{num_recipes}</h4>
-            <div className='d-flex justify-content-between'>
-            <p><FaHeart className='text-danger'/> {likes}</p>
-            <Button variant='danger'>View Recipes</Button>
+            <h3 className='fs-3 text-danger'>{name}</h3>
+            <h5>Years of experience: {years_of_experience}</h5>
+            <h5 className='mb-3'>Recipes Developed:{num_recipes}</h5>
+            <div className='d-flex justify-content-between align-items-center'>
+            <div><FaHeart className='text-danger'/> {likes}</div>
+            <Link to={`/details/${id}`}><Button variant='info'>View Recipes</Button></Link>
             </div>
         </div>
     );

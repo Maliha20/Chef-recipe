@@ -13,13 +13,13 @@ const Header = () => {
 
       <div className="d-flex flex-column flex-md-row mb-2">
         <ActiveLink to="/">
-          <p className="nav-link">Home</p>
+          <p className="nav-P">Home</p>
         </ActiveLink>
         <ActiveLink to="/blog">
-          <p className="nav-link">Blog</p>
+          <p className="nav-P">Blog</p>
         </ActiveLink>
         <ActiveLink to="/">
-         <p className="nav-link">About</p>
+         <p className="nav-P">About</p>
         </ActiveLink>
       </div>
       <Button className="px-4 mx-4 mb-5" variant="warning">Login</Button>

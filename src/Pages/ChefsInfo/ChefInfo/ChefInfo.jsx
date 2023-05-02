@@ -10,9 +10,10 @@ const ChefInfo = () => {
         .then(data =>setChefs(data))
     },[])
     return (
-      <div className='container'>
-          <div className='row mx-auto my-5'>
-            <h4 className='text-center text-danger my-5'>Top Korean Chefs</h4>
+      <div className='container mx-auto '>
+        <h4 className='text-center text-danger my-5'>Top Korean Chefs</h4>
+          <div className='row gap-3'>
+            
             {
                 chefs.map(chef=>
                 <ChefCard key={chef.id}
