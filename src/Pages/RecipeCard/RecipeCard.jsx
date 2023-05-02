@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "./RecipeCard.css";
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
-import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const RecipeCard = ({ recipe }) => {
-  console.log(recipe);
+  const [disable, setDisable] =useState(false)
   const { pic, r_name, r_description, cooking_method, r_rating, ingredients } =
     recipe;
+
+
+    const handleFavorite= ()=>{
+        setDisable(true);
+        toast("Added to favorites!");  
+    }
   return (
     <div className="container p-5 my-5 col-12 col-lg-3 bg-body-tertiary rounded shadow-lg">
       <div>
@@ -31,11 +39,12 @@ const RecipeCard = ({ recipe }) => {
             </Card.Text>
             <div className="d-flex justify-content-between align-items-center">
             <Rating style={{ maxWidth: 100 }} value={r_rating} readOnly />
-            <Button variant="warning">Add to favorites</Button>
+            <Button onClick={handleFavorite} disabled={disable} variant="warning">Favorite</Button>
             </div>
           </Card.Body>
         </Card>
       </div>
+      <ToastContainer />
     </div>
   );
 };
