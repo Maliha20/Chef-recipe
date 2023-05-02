@@ -6,7 +6,7 @@ import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import LazyLoad from 'react-lazy-load';
 
 const RecipeCard = ({ recipe }) => {
   const [disable, setDisable] =useState(false)
@@ -22,7 +22,9 @@ const RecipeCard = ({ recipe }) => {
     <div className="container p-5 my-5 col-12 col-lg-3 bg-body-tertiary rounded shadow-lg">
       <div>
         <Card>
+          <LazyLoad>
           <Card.Img className="recipe-image mb-3" variant="top" src={pic} />
+          </LazyLoad>
           <Card.Body>
             <Card.Title className="text-danger fs-3">{r_name}</Card.Title>
             <Card.Text>

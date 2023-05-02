@@ -1,9 +1,10 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaPinterest, FaTwitch, FaTwitter } from "react-icons/fa";
+import './Footer.css'
 
 const Footer = () => {
   return (
-    <div className="bg-warning d-flex flex-column justify-content-center flex-md-row py-4">
+    <div className="bgFooter d-flex flex-column justify-content-center flex-md-row py-4">
       
         
         <div className="bg-white mx-5 p-3 rounded">
