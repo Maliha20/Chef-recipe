@@ -7,7 +7,7 @@ const Footer = () => {
       
         
         <div className="bg-white mx-5 p-3 rounded">
-        <h3 className="text-warning fw-bold">Dan Bam</h3>
+        <h3 className="text-warning fs-2 fw-bold">단밤</h3>
         <p className="fs-3 fw-bold text-warning">Never miss a new recipe!</p>
         <p className="fs-6">
           Join 20,000+ other Korean food lovers! <br /> Get the latest recipes from My

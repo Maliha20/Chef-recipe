@@ -14,7 +14,7 @@ import Blog from "../Pages/Blog/Blog";
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>    
             },
             {
               path: '/blog',

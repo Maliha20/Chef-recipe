@@ -1,0 +1,9 @@
+.chef-image{
+    width: 350px;
+    height: 250px;
+}
+.bgCard{
+    background-image: url('../../../assets/danbam3.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
