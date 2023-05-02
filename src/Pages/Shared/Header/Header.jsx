@@ -3,25 +3,26 @@ import './Header.css'
 import logo from "./../../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import ActiveLink from "../../ActiveLink/ActiveLink";
 
 const Header = () => {
   return (
     <div className="bg-img pb-5">
-      <nav className="d-flex justify-content-between align-items-center">
+      <nav className="d-flex flex-column flex-md-row justify-content-between align-items-center">
       <img className="logo-img" src={logo} alt="" />
 
-      <div className="d-flex">
-        <Link className="nav-link" to="/">
-          Home
-        </Link>
-        <Link className="nav-link" to="/about">
-          About
-        </Link>
-        <Link className="nav-link" to="/blog">
-          Blog
-        </Link>
+      <div className="d-flex flex-column flex-md-row mb-2">
+        <ActiveLink to="/">
+          <Link className="nav-link">Home</Link>
+        </ActiveLink>
+        <ActiveLink to="/blog">
+          <Link className="nav-link">Blog</Link>
+        </ActiveLink>
+        <ActiveLink to="/">
+         <Link className="nav-link">About</Link>
+        </ActiveLink>
       </div>
-      <Button className="px-4 mx-4" variant="warning">Login</Button>
+      <Button className="px-4 mx-4 mb-5" variant="warning">Login</Button>
     </nav>
       <div className=" d-flex flex-column justify-content-center">
        <h2 className="food-slogan text-center font mb-5 ">Korean food, <br />
