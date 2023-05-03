@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import './Header.css'
 import logo from "./../../../assets/logo.png";
 import { Link } from "react-router-dom";
-import { Button, NavDropdown } from "react-bootstrap";
+import { Button, Dropdown, NavDropdown } from "react-bootstrap";
 import ActiveLink from "../../ActiveLink/ActiveLink";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { FaUserCircle } from "react-icons/fa";
@@ -27,10 +27,10 @@ const Header = () => {
         <ActiveLink to="/home">
           <p className="nav-link">Home</p>
         </ActiveLink>
-        <ActiveLink to="/home/blog">
+        <ActiveLink to="/blog">
           <p className="nav-link">Blog</p>
         </ActiveLink>
-        <ActiveLink to="/home/about">
+        <ActiveLink to="/about">
          <p className="nav-link">About</p>
         </ActiveLink>
       </div>
@@ -38,9 +38,20 @@ const Header = () => {
      
       {  
         user ?
-        <NavDropdown title={ <FaUserCircle className="user-profile me-5"></FaUserCircle>} id="basic-nav-dropdown">
-           <Button onClick={handleLogout} className="px-4 mx-4 mb-5" variant="warning">Logout</Button>
-        </NavDropdown>
+        <Dropdown>
+        <Dropdown.Toggle variant="link" bsPrefix="p-0">
+          <FaUserCircle className="user-profile me-5"></FaUserCircle>
+        </Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Button
+            onClick={handleLogout}
+            className="px-4 mx-4 mb-5"
+            variant="warning"
+          >
+            Logout
+          </Button>
+        </Dropdown.Menu>
+      </Dropdown>
        
        : <Link to='/login'><Button className="px-4 mx-4 mb-5" variant="warning">Login</Button></Link>
       }

@@ -46,6 +46,7 @@ const Register = () => {
       else{
         setSuccess('Your registration is successfull')
         setError('')
+        form.reset()
       }
     }
     )

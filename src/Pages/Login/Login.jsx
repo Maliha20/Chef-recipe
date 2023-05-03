@@ -1,7 +1,7 @@
 import React, { useContext, useState, useSyncExternalStore } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
@@ -9,7 +9,10 @@ const Login = () => {
     const{user, SignInUser, GoogleSignIn, GithubSignIn, logOut} = useContext(AuthContext)
     const[success, setSuccess] =useState('')
     const[error, setError] =useState('')
-    const [show,setShow] = useState(false)
+    const[show,setShow] = useState(false)
+    const navigate = useNavigate()
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || '/home'
 
     const handleLogin =(event)=>{
         event.preventDefault();
@@ -22,6 +25,7 @@ const Login = () => {
             const loggedUser = result.user
             console.log(loggedUser)
             setError('')
+            navigate(from,{replace : true})
         })
         .catch(error =>{
             setError(error.message)

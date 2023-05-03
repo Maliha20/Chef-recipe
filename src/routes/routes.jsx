@@ -8,6 +8,7 @@ import Login from "../Pages/Login/Login";
 import LoginLayout from "../Layouts/LoginLayout";
 import About from "../Pages/About/About";
 import Register from "../Pages/Register/Register";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -24,6 +25,14 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      } ,
+       {
+        path: "/blog",
+        element: <Blog></Blog>,
+      },
+      {
+        path: "/about",
+        element: <About></About>
       }
     ]
   },
@@ -34,15 +43,8 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home></Home>,
-      },
-      {
-        path: "/home/blog",
-        element: <Blog></Blog>,
-      },
-      {
-        path: "/home/about",
-        element: <About></About>
       }
+    
       
     ],
   },
@@ -52,7 +54,7 @@ const router = createBrowserRouter([
     children:[
       {
         path: ':id',
-        element: <ChefDetails></ChefDetails>,
+        element: <PrivateRoute><ChefDetails></ChefDetails></PrivateRoute>,
         loader:({params})=>fetch(`http://localhost:5000/chef/${params.id}`)
       }
     ]
