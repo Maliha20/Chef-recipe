@@ -6,7 +6,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-    const{user, SignInUser, GoogleSignIn} = useContext(AuthContext)
+    const{user, SignInUser, GoogleSignIn, GithubSignIn} = useContext(AuthContext)
     const[success, setSuccess] =useState('')
     const[error, setError] =useState('')
     const [show,setShow] = useState(false)
@@ -43,6 +43,21 @@ const Login = () => {
             setSuccess('')
         })
 
+    }
+
+    const handleGithub =()=>{
+        GithubSignIn()
+        .then(result=>{
+            const loggedUser = result.user;
+            console.log(loggedUser)
+            setSuccess('login successful')
+            setError('')
+        })
+        .catch(error=>{
+            console.log(error)
+            setError(error.message)
+            setSuccess('')
+        })
     }
     
   return (
@@ -85,7 +100,7 @@ const Login = () => {
             Login with Google
           </Button>
           <div>
-            <Button className="mb-3" variant="outline-info">
+            <Button onClick={handleGithub} className="mb-3" variant="outline-info">
               Login with Github
             </Button>
           </div>
