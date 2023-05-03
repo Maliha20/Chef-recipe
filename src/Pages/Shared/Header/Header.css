@@ -25,3 +25,12 @@
 .nav-link:hover{
     color: rgb(46, 220, 185);
 }
+.user-profile{
+    width: 45px;
+    height: 45px;
+    color: rgb(255, 217, 2)
+}
+
+#basic-nav-dropdown{
+
+}

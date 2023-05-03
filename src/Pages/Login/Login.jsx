@@ -6,7 +6,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
-    const{user, SignInUser, GoogleSignIn, GithubSignIn} = useContext(AuthContext)
+    const{user, SignInUser, GoogleSignIn, GithubSignIn, logOut} = useContext(AuthContext)
     const[success, setSuccess] =useState('')
     const[error, setError] =useState('')
     const [show,setShow] = useState(false)
@@ -44,7 +44,7 @@ const Login = () => {
         })
 
     }
-
+      
     const handleGithub =()=>{
         GithubSignIn()
         .then(result=>{
