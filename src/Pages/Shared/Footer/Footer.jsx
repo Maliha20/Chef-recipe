@@ -4,7 +4,7 @@ import './Footer.css'
 
 const Footer = () => {
   return (
-    <div className="bgFooter d-flex flex-column justify-content-center flex-md-row py-4">
+    <div className="bgFooter d-flex flex-column justify-content-center flex-md-row py-4 mt-auto">
       
         
         <div className="bg-white mx-5 p-3 rounded">

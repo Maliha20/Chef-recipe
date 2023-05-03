@@ -5,7 +5,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { FaEye, FaEyeSlash,  } from 'react-icons/fa';
 
 const Register = () => {
-  const { createUser,user } = useContext(AuthContext);
+  const { createUser,profileUpdate, profileData } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [show, setShow] = useState(false)
@@ -48,12 +48,19 @@ const Register = () => {
         setError('')
         form.reset()
       }
+
+      profileUpdate(name,photo)
+     .then(()=>{
+        profileData(email,name,photo)
+     })
     }
     )
     .catch(error =>{
         setError(error.message)
     });
+    
   };
+
   return (
     <div className="mx-auto d-flex flex-column justify-content-center">
       <Container className="my-5 w-25 borderDesign rounded p-5">

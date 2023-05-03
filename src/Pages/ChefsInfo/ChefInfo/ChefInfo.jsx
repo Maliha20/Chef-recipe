@@ -11,7 +11,7 @@ const ChefInfo = () => {
     },[])
     return (
       <div className='container mx-auto '>
-        <h4 className='text-center text-danger my-5'>Top Korean Chefs</h4>
+        <h2 className='text-center text-danger my-5'>Top Korean Chefs</h2>
           <div className='row gap-3'>
             
             {

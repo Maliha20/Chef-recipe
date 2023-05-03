@@ -12,3 +12,11 @@
     width: 700px;
     height: 800px;
 }
+
+@media only screen and (max-width:576px){
+  
+    .size{
+        width: 300px;
+        height: 400px;
+    }
+}

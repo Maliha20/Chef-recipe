@@ -2,11 +2,10 @@ import React, { useContext } from "react";
 import logo from "./../../../assets/logo.png";
 import { Link } from "react-router-dom";
 import "./Navibar.css";
-import { Button, Dropdown, Nav, NavDropdown } from "react-bootstrap";
-import profile from "../../../assets/profile.jpg";
+import { Button, Dropdown} from "react-bootstrap";
 import ActiveLink from "../../ActiveLink/ActiveLink";
 import { AuthContext } from "../../../Providers/AuthProvider";
-import { FaUserCircle } from "react-icons/fa";
+
 
 const Navibar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -18,26 +17,26 @@ const Navibar = () => {
       });
   };
   return (
-    <nav className="d-flex justify-content-between align-items-center shadow-lg">
+    <nav className=" d-flex flex-column flex-md-row justify-content-between align-items-center shadow-lg">
       <Link to="/home">
         <img className="logo-img" src={logo} alt="" />
       </Link>
 
       <div className="d-flex">
-        <ActiveLink to="/home">
+      <ActiveLink to="/home">
           <p className="nav-link">Home</p>
         </ActiveLink>
         <ActiveLink to="/blog">
           <p className="nav-link">Blog</p>
         </ActiveLink>
         <ActiveLink to="/about">
-          <p className="nav-link">About</p>
+         <p className="nav-link">About</p>
         </ActiveLink>
       </div>
       {user ? (
         <Dropdown>
           <Dropdown.Toggle variant="link" bsPrefix="p-0">
-            <FaUserCircle className="user-profile me-5"></FaUserCircle>
+          <img title={user.displayName} className="user-profile me-5" src={user.photoURL} alt="" />
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <Button

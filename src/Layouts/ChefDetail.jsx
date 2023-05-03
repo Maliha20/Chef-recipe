@@ -5,7 +5,7 @@ import Footer from '../Pages/Shared/Footer/Footer';
 
 const ChefDetail = () => {
     return (
-        <div>
+        <div className='layout-fix'>
             <Navibar></Navibar>
             <Outlet></Outlet>
             <Footer></Footer>

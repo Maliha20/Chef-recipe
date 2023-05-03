@@ -40,7 +40,7 @@ const Header = () => {
         user ?
         <Dropdown>
         <Dropdown.Toggle variant="link" bsPrefix="p-0">
-          <FaUserCircle className="user-profile me-5"></FaUserCircle>
+         <img title={user.displayName} className="user-profile me-5" src={user.photoURL} alt="" />
         </Dropdown.Toggle>
         <Dropdown.Menu>
           <Button

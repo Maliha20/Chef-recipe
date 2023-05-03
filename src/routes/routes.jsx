@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Main from "../Layouts/Main";
+
 import Home from "../Pages/Home/Home/Home";
 import Blog from "../Pages/Blog/Blog";
 import ChefDetails from "../Pages/ChefDetails/ChefDetails";
@@ -9,6 +9,9 @@ import LoginLayout from "../Layouts/LoginLayout";
 import About from "../Pages/About/About";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import Main from "../Layouts/Main";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+
 
 
 
@@ -17,6 +20,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element:<LoginLayout></LoginLayout>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: '/login',
@@ -38,7 +42,8 @@ const router = createBrowserRouter([
   },
   {
     path: "/home",
-    element: <Main></Main>,
+    element:<Main></Main>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/home",
@@ -51,6 +56,7 @@ const router = createBrowserRouter([
   {
     path: "details",
     element: <ChefDetail></ChefDetail>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path: ':id',
