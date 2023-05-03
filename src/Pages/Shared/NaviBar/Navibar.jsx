@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./Navibar.css";
 import { Button, Nav } from "react-bootstrap";
 import profile from "../../../assets/profile.jpg";
+import ActiveLink from "../../ActiveLink/ActiveLink";
 
 const Navibar = () => {
   return (
@@ -11,18 +12,18 @@ const Navibar = () => {
       <img className="logo-img" src={logo} alt="" />
 
       <div className="d-flex">
-        <Link className="nav-link" to="/">
-          Home
-        </Link>
-        <Link className="nav-link" to="/about">
-          About
-        </Link>
-        <Link className="nav-link" to="/blog">
-          Blog
-        </Link>
+        <ActiveLink to="/home">
+          <p className="nav-link" >Home</p>
+        </ActiveLink>
+        <ActiveLink to="/home/blog">
+        <p className="nav-link" >Blog</p>
+        </ActiveLink>
+        <ActiveLink to="/home/about">
+        <p className="nav-link">About</p>
+        </ActiveLink>
        
       </div>
-      <Button className="px-4 mx-4" variant="warning">Login</Button>
+      <Link to='/login'><Button className="px-4 mx-4" variant="warning">Login</Button></Link>
     </nav>
   );
 };

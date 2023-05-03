@@ -12,17 +12,17 @@ const Header = () => {
       <img className="logo-img" src={logo} alt="" />
 
       <div className="d-flex flex-column flex-md-row mb-2">
-        <ActiveLink to="/">
-          <p className="nav-P">Home</p>
+        <ActiveLink to="/home">
+          <p className="nav-link">Home</p>
         </ActiveLink>
-        <ActiveLink to="/blog">
-          <p className="nav-P">Blog</p>
+        <ActiveLink to="/home/blog">
+          <p className="nav-link">Blog</p>
         </ActiveLink>
-        <ActiveLink to="/">
-         <p className="nav-P">About</p>
+        <ActiveLink to="/home/about">
+         <p className="nav-link">About</p>
         </ActiveLink>
       </div>
-      <Button className="px-4 mx-4 mb-5" variant="warning">Login</Button>
+      <Link to='/login'><Button className="px-4 mx-4 mb-5" variant="warning">Login</Button></Link>
     </nav>
       <div className=" d-flex flex-column justify-content-center">
        <h2 className="food-slogan text-center font mb-5 ">Korean food, <br />

@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Lato:wght@700&family=Mynerve&display=swap');
+
+.bg-color{
+    background-color: rgb(3, 184, 157);
+}
+
+.font-style{
+   font-family:'Caveat', 'cursive';
+   font-weight: bold;
+   color: beige;
+   font-size: 50px;
+}
