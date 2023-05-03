@@ -2,12 +2,13 @@ import React, { useContext, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
-import { registerVersion } from "firebase/app";
+import { FaEye, FaEyeSlash,  } from 'react-icons/fa';
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser,user } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [show, setShow] = useState(false)
 
   const handleRegister = (event) => {
     event.preventDefault();
@@ -19,7 +20,8 @@ const Register = () => {
     const photo = form.photo.value;
     console.log(email, password, name, photo);
 
-    createUser(email, password).then((result) => {
+    createUser(email, password)
+    .then((result) => {
       const registeredUser = result.user;
       console.log(registeredUser);
       setError('')
@@ -45,6 +47,10 @@ const Register = () => {
         setSuccess('Your registration is successfull')
         setError('')
       }
+    }
+    )
+    .catch(error =>{
+        setError(error.message)
     });
   };
   return (
@@ -69,16 +75,22 @@ const Register = () => {
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" name="email" placeholder="Enter email" />
+            <Form.Control type="email" name="email" required placeholder="Enter email" />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control
-              type="password"
+              type={ show ? "text" : "password"}
               name="password"
               placeholder="Password"
+              required
             />
+            <p onClick={()=> setShow(!show)}>
+                {
+                    show ? <FaEyeSlash className="text-danger"></FaEyeSlash> : <FaEye className="text-success"></FaEye>
+                }
+            </p>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Confirm Password</Form.Label>
@@ -86,6 +98,7 @@ const Register = () => {
               type="password"
               name="confirm"
               placeholder="Password"
+              required
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">

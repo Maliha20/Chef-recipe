@@ -11,8 +11,7 @@ const Footer = () => {
         <h3 className="text-warning fs-2 fw-bold">단밤</h3>
         <p className="fs-3 fw-bold text-warning">Never miss a new recipe!</p>
         <p className="fs-6">
-          Join 20,000+ other Korean food lovers! <br /> Get the latest recipes from My
-          Korean Kitchen delivered to your email inbox. <br /> It's free!
+          Join 20,000+ other Korean food lovers! <br /> Get the latest recipes from from the top chefs of korea, delivered to your email inbox. <br /> It's free!
         </p>
         <input className="me-2 mb-2" type="text" name="name" id="" placeholder="Your Name"/>
         <input className="mb-2" type="email" name="email" id="" placeholder="Email"/>
