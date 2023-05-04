@@ -1,7 +1,7 @@
 import React from "react";
 
 import image1 from "../../../assets/Baesuk (Korean Pear Dessert, Two Ways).png";
-import image2 from "../../../assets/Bingsu-with-redbeans-tall-724x1024.jpg";
+import image2 from "../../../assets/image2.jpg";
 import image3 from "../../../assets/Bungeoppang.jpg";
 import image4 from "../../../assets/dried persimon.jpg";
 import image5 from "../../../assets/image3.jpg";
