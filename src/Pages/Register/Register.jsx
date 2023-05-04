@@ -127,7 +127,7 @@ const Register = () => {
         </Form>
         <div className="my-2 mx-auto">
           <Form.Text className="text-secondary">
-            Already Have An Account? <Link to="/login">Login</Link>
+            Already Have An Account? <Link to="/">Login</Link>
           </Form.Text>
         </div>
       </Container>
