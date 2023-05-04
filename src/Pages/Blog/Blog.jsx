@@ -67,7 +67,7 @@ const Blog = () => {
       <div ref={ref}>
         <h2 className="text-center text-danger fs-2 fw-bold">Our Thoughts</h2>
         <Row className="my-4 ">
-          <Col xs={6}>
+          <Col lg={6}>
             <Card className="fixed-height">
               <Card.Img className="blog-img" variant="top" src={icon2} />
               <Card.Body>
@@ -91,7 +91,7 @@ const Blog = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={6}>
+          <Col lg={6}>
             <Card className="fixed-height">
               <Card.Img className="blog-img" variant="top" src={icon4} />
               <Card.Body>
@@ -116,7 +116,7 @@ const Blog = () => {
           </Col>
         </Row>
         <Row>
-          <Col xs={6}>
+          <Col lg={6}>
             <Card className="fixed-height">
               <Card.Img className="blog-img" variant="top" src={icon3} />
               <Card.Body>
@@ -139,8 +139,8 @@ const Blog = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col xs={6}>
-            {" "}
+          <Col lg={6}>
+            
             <Card className="fixed-height">
               <Card.Img className="blog-img" variant="top" src={icon1} />
               <Card.Body>
