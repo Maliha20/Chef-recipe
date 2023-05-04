@@ -3,8 +3,9 @@ import logo from "./../../../assets/logo.png";
 import { Link } from "react-router-dom";
 import "./Navibar.css";
 import { Button, Dropdown} from "react-bootstrap";
-import ActiveLink from "../../ActiveLink/ActiveLink";
+
 import { AuthContext } from "../../../Providers/AuthProvider";
+import ActiveLink from "../../ActiveLink/ActiveLink";
 
 
 const Navibar = () => {
@@ -23,15 +24,9 @@ const Navibar = () => {
       </Link>
 
       <div className="d-flex">
-      <ActiveLink to="/home">
-          <p className="nav-link">Home</p>
-        </ActiveLink>
-        <ActiveLink to="/blog">
-          <p className="nav-link">Blog</p>
-        </ActiveLink>
-        <ActiveLink to="/about">
-         <p className="nav-link">About</p>
-        </ActiveLink>
+      <ActiveLink to="/home">Home</ActiveLink>
+        <ActiveLink to="/blog">Blog</ActiveLink>
+        <ActiveLink to="/about">About</ActiveLink>
       </div>
       {user ? (
         <Dropdown>
@@ -51,7 +46,7 @@ const Navibar = () => {
       ) : (
         
 
-        <Link to="/login">
+        <Link to="/">
           <Button className="px-4 mx-4 mb-5" variant="warning">
             Login
           </Button>

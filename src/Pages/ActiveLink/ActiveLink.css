@@ -1,7 +1,20 @@
 .active{
-    color:rgb(8, 194, 157);
+  color: rgb(4, 200, 191);
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+.default{
+    margin-right: 40px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
+    color: rgb(243, 174, 0);
     font-weight: bold;
 
+}
+
+.default:hover{
+    color: rgb(4, 200, 191); 
 }

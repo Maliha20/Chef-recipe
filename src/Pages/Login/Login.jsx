@@ -38,8 +38,10 @@ const Login = () => {
         .then(result=>{
             const loggedUser = result.user;
             console.log(loggedUser)
+            navigate(from,{replace : true})
             setSuccess('login successful')
             setError('')
+
         })
         .catch(error=>{
             console.log(error)
@@ -54,6 +56,7 @@ const Login = () => {
         .then(result=>{
             const loggedUser = result.user;
             console.log(loggedUser)
+            navigate(from,{replace : true})
             setSuccess('login successful')
             setError('')
         })
@@ -65,7 +68,7 @@ const Login = () => {
     }
     
   return (
-    <div className="mx-auto d-flex flex-column justify-content-center">
+    <div className="d-flex flex-column justify-content-center">
       <Container className="my-5 w-25 borderDesign rounded p-5">
         <Form onSubmit={handleLogin}>
           <Form.Group className="mb-3" controlId="formBasicEmail">

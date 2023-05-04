@@ -3,10 +3,9 @@ import './Header.css'
 import logo from "./../../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { Button, Dropdown, NavDropdown } from "react-bootstrap";
-import ActiveLink from "../../ActiveLink/ActiveLink";
 import { AuthContext } from "../../../Providers/AuthProvider";
-import { FaUserCircle } from "react-icons/fa";
-import { signOut } from "firebase/auth";
+import ActiveLink from "../../ActiveLink/ActiveLink";
+
 
 const Header = () => {
   const {user, logOut} =useContext(AuthContext)
@@ -24,15 +23,11 @@ const Header = () => {
       <Link to='/home'><img className="logo-img" src={logo} alt="" /></Link>
 
       <div className="d-flex flex-column flex-md-row mb-2">
-        <ActiveLink to="/home">
-          <p className="nav-link">Home</p>
-        </ActiveLink>
-        <ActiveLink to="/blog">
-          <p className="nav-link">Blog</p>
-        </ActiveLink>
-        <ActiveLink to="/about">
-         <p className="nav-link">About</p>
-        </ActiveLink>
+      
+        <ActiveLink to="/home">Home</ActiveLink>
+        <ActiveLink to="/blog">Blog</ActiveLink>
+        <ActiveLink to="/about">About</ActiveLink>
+      
       </div>
       <div>
      
@@ -53,7 +48,7 @@ const Header = () => {
         </Dropdown.Menu>
       </Dropdown>
        
-       : <Link to='/login'><Button className="px-4 mx-4 mb-5" variant="warning">Login</Button></Link>
+       : <Link to='/'><Button className="px-4 mx-4 mb-5" variant="warning">Login</Button></Link>
       }
       </div>
     </nav>

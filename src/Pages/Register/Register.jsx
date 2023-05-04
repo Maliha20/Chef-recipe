@@ -62,7 +62,7 @@ const Register = () => {
   };
 
   return (
-    <div className="mx-auto d-flex flex-column justify-content-center">
+    <div className="d-flex flex-column justify-content-center">
       <Container className="my-5 w-25 borderDesign rounded p-5">
         <Form onSubmit={handleRegister}>
           <Form.Group className="mb-3" controlId="formBasicEmail">

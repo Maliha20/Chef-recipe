@@ -22,7 +22,7 @@ const RecipeCard = ({ recipe }) => {
     <div className="container p-5 my-5 col-12 col-lg-3 bg-body-tertiary rounded shadow-lg">
       <div>
         <Card>
-          <LazyLoad throttle={200} height={300}>
+          <LazyLoad threshold={0.70} height={300} width={385}>
           
           <Card.Img className="recipe-image mb-3" variant="top" src={pic} />
           </LazyLoad>

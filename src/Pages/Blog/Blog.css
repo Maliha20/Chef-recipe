@@ -1,0 +1,13 @@
+.blog-img{
+    width: 634px;
+    height:500px;
+}
+.fixed-height{
+    min-height: 770px;
+    position: relative;
+}
+.position{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}

@@ -8,10 +8,6 @@
 .b-ground2{
     background-color: rgba(53, 47, 57, 0.166);
 }
-.size{
-    width: 700px;
-    height: 800px;
-}
 
 @media only screen and (max-width:576px){
   

@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
-        path: '/login',
+        path: '/',
         element:<Login></Login>
       },
       {
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
       {
         path: ':id',
         element: <PrivateRoute><ChefDetails></ChefDetails></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/chef/${params.id}`)
+        loader:({params})=>fetch(`https://chef-recipe-server-maliha20.vercel.app/chef/${params.id}`)
       }
     ]
   }
