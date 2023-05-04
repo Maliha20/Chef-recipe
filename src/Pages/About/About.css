@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Lato:wght@700&family=Mynerve&display=swap');
 
 .bg-color{
-    background-color: rgb(3, 184, 157);
+    background-image: url('../../assets/blur.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 .font-style{
@@ -9,4 +12,9 @@
    font-weight: bold;
    color: beige;
    font-size: 50px;
+}
+
+.background-style{
+    border-radius: 10px;
+    background-color: rgba(12, 169, 204, 0.377);
 }
