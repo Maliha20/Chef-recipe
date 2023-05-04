@@ -1,27 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import icon2 from "../../assets/icon2.png";
-import { FaDownload } from "react-icons/fa";
+import {
+  FaDownload,
+  FaMedal,
+  FaMehRollingEyes,
+  FaSmileBeam,
+} from "react-icons/fa";
 import icon4 from "../../assets/icon4 (2).jpg";
 import "./Blog.css";
 import icon1 from "../../assets/icon.png";
 import icon3 from "../../assets/icon3 (2).png";
 import Pdf from "react-to-pdf";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ref = React.createRef();
 const options = {
-    orientation: 'horizontal',
-    unit: 'px',
-    format: [585,825]
+  orientation: "horizontal",
+  unit: "px",
+  format: [585, 825],
 };
 const Blog = () => {
+  const [toggle1, setToggle1] = useState(false);
+  const [toggle2, setToggle2] = useState(false);
+  const [toggle3, setToggle3] = useState(false);
+  const [toggle4, setToggle4] = useState(false);
+
+  const handleLike1 = () => {
+    setToggle1(!toggle1);
+    toast("Thank you for your response! We will work on getting better");
+  };
+  const handleLike2 = () => {
+    setToggle2(!toggle2);
+    toast("Thank you for your response! We will work on getting better");
+  };
+  const handleLike3 = () => {
+    setToggle3(!toggle3);
+    toast("Thank you for your response! We will work on getting better");
+  };
+  const handleLike4 = () => {
+    setToggle4(!toggle4);
+    toast("Thank you for your response! We will work on getting better");
+  };
+
   return (
     <Container className="my-5">
-    
       <div className="d-flex flex-column flex-md-row justify-content-end">
         <div>
-          <Pdf targetRef={ref} filename="Dan-Bam-Blog.pdf" options={options} x={.5}
-           y={.5} scale={0.8}>
+          <Pdf
+            targetRef={ref}
+            filename="Dan-Bam-Blog.pdf"
+            options={options}
+            x={0.5}
+            y={0.5}
+            scale={0.8}
+          >
             {({ toPdf }) => (
               <Button onClick={toPdf} variant="outline-info">
                 Download <FaDownload></FaDownload>
@@ -46,9 +80,14 @@ const Blog = () => {
                   uncontrolled components are independent and are in full
                   control over their behavior.
                 </Card.Text>
-                <Button className="position" variant="info">
-                  Download <FaDownload></FaDownload>
-                </Button>
+
+                <p onClick={handleLike1}>
+                  {toggle1 ? (
+                    <FaMehRollingEyes className="position text-danger"></FaMehRollingEyes>
+                  ) : (
+                    <FaSmileBeam className=" position text-success"></FaSmileBeam>
+                  )}
+                </p>
               </Card.Body>
             </Card>
           </Col>
@@ -65,9 +104,13 @@ const Blog = () => {
                   The property used for it is called "Proptype". If any data is
                   invalid It'll show a warning in the Js console.
                 </Card.Text>
-                <Button className="position" variant="info">
-                  Download <FaDownload></FaDownload>
-                </Button>
+                <p onClick={handleLike2}>
+                  {toggle2 ? (
+                    <FaMehRollingEyes className="position text-danger"></FaMehRollingEyes>
+                  ) : (
+                    <FaSmileBeam className=" position text-success"></FaSmileBeam>
+                  )}
+                </p>
               </Card.Body>
             </Card>
           </Col>
@@ -86,9 +129,13 @@ const Blog = () => {
                   javascript. Express JS is a Node.js framework which was
                   developed to make coding easier, using node js.
                 </Card.Text>
-                <Button className="position" variant="info">
-                  Download <FaDownload></FaDownload>
-                </Button>
+                <p onClick={handleLike3}>
+                  {toggle3 ? (
+                    <FaMehRollingEyes className="position text-danger"></FaMehRollingEyes>
+                  ) : (
+                    <FaSmileBeam className=" position text-success"></FaSmileBeam>
+                  )}
+                </p>
               </Card.Body>
             </Card>
           </Col>
@@ -107,14 +154,31 @@ const Blog = () => {
                   hooks. It also speed up the rendering process cause custom
                   hooks do not render again and again while rending codes.
                 </Card.Text>
-                <Button className="position" variant="info">
-                  Download <FaDownload></FaDownload>
-                </Button>
+                <p onClick={handleLike4}>
+                  {toggle4 ? (
+                    <FaMehRollingEyes className="position text-danger"></FaMehRollingEyes>
+                  ) : (
+                    <FaSmileBeam className=" position text-success"></FaSmileBeam>
+                  )}
+                </p>
               </Card.Body>
             </Card>
           </Col>
         </Row>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        limit={0}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </Container>
   );
 };

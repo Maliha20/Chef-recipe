@@ -7,6 +7,8 @@
     position: relative;
 }
 .position{
+    color: rgb(3, 153, 58);
+    font-size: 50px;
     position: absolute;
     bottom: 10px;
     left: 10px;

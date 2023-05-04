@@ -8,7 +8,7 @@ import './ExtraSection.css'
 
 const ExtraSection = () => {
   return (
-    <div>
+    <div className="my-5">
         <div>
             <h2 className="text-danger text-center my-5">Know Your Food</h2>
         </div>

@@ -55,7 +55,7 @@ const Header = () => {
       <div className=" d-flex flex-column justify-content-center">
        <h2 className="food-slogan text-center font mb-5 ">Korean food, <br />
        a feast for the senses</h2>
-       <Button variant="info" className="px-5 mx-auto mb-5">Join</Button>
+       <Link to="/" className="mx-auto"><Button variant="info" className="px-5  mb-5">Join</Button></Link>
        <h5 className="food-slogan fs-3 text-center">
         Join us for new recipes daily
        </h5>

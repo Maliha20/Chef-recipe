@@ -17,6 +17,7 @@ const RecipeCard = ({ recipe }) => {
     const handleFavorite= ()=>{
         setDisable(true);
         toast("Added to favorites!");  
+       
     }
   return (
     <div className="container p-5 my-5 col-12 col-lg-3 bg-body-tertiary rounded shadow-lg">
