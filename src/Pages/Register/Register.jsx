@@ -6,7 +6,7 @@ import { FaEye, FaEyeSlash,  } from 'react-icons/fa';
 import './Register.css'
 
 const Register = () => {
-  const { createUser,profileUpdate, profileData } = useContext(AuthContext);
+  const {user, createUser,profileUpdate, profileData } = useContext(AuthContext);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [show, setShow] = useState(false)
