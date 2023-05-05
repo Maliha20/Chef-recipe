@@ -23,19 +23,11 @@ const Login = () => {
         SignInUser(email,password)
         .then(result=>{
             const loggedUser = result.user
-            console.log(loggedUser.email)
-            if(!loggedUser.password){       
-              setError('Invalid account')
-              setSuccess('')
-          }
-          else{
-              setSuccess('Your login has been successful')
-              setError('')
-              form.reset('')
-              navigate(from,{replace : true})
-          }
+            console.log(loggedUser)
             
-            
+            navigate(from,{replace : true})
+            setSuccess('login successful')
+            setError('')
         })
         .catch(error =>{
             setError(error.message)
