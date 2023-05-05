@@ -19,16 +19,18 @@ const ChefBanner = () => {
     <div className="b-ground">
       <div className="container d-flex flex-column flex-md-row justify-content-around align-items-center">
         
-        <div className="container my-5 p-4">
-        <LazyLoad height={800} width={700} threshold={0.95}>
+       
+        <LazyLoad threshold={0.95}>
+        <div className="container size my-5 p-4">
         <img
             className="w-100 h-100 border border-5"
             src={picture_url}
             alt=""
           />
+            </div>
     </LazyLoad>
-        </div>
-        <div className="container w-50 p-5">
+      
+        <div className="container chef-bio p-5">
           <h3 className="text-white fs-1">{name}</h3>
           <h5 className="text-white fs-3">{bio}</h5>
           <h5 className="text-white fs-3">Experience: {years_of_experience}</h5>

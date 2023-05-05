@@ -14,8 +14,8 @@ const Footer = () => {
           Join 20,000+ other Korean food lovers! <br /> Get the latest recipes from from the top chefs of korea, delivered to your email inbox. <br /> It's free!
         </p>
         <input className="me-2 mb-2" type="text" name="name" id="" placeholder="Your Name"/>
-        <input className="mb-2" type="email" name="email" id="" placeholder="Email"/>
-        <button variant="danger" className="bg-danger text-white px-4 mx-4">Subscribe</button>
+        <input className="mb-2 me-2" type="email" name="email" id="" placeholder="Email"/>
+        <button variant="danger" className="bg-danger text-white px-4">Subscribe</button>
         </div>
         <div className="mx-5 mb-3">
             <h4 className="text-center">Connect</h4>

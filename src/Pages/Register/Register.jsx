@@ -3,6 +3,7 @@ import { Button, Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { FaEye, FaEyeSlash,  } from 'react-icons/fa';
+import './Register.css'
 
 const Register = () => {
   const { createUser,profileUpdate, profileData } = useContext(AuthContext);
@@ -66,7 +67,7 @@ const Register = () => {
 
   return (
     <div className="d-flex flex-column justify-content-center">
-      <Container className="my-5 w-25 borderDesign rounded p-5">
+      <Container className="my-5 form-width borderDesign rounded p-5">
         <Form onSubmit={handleRegister}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Name</Form.Label>

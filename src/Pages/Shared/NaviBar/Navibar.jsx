@@ -23,7 +23,7 @@ const Navibar = () => {
         <img className="logo-img" src={logo} alt="" />
       </Link>
 
-      <div className="d-flex">
+      <div className="d-flex flex-column flex-md-row my-4">
       <ActiveLink to="/home">Home</ActiveLink>
         <ActiveLink to="/blog">Blog</ActiveLink>
         <ActiveLink to="/about">About</ActiveLink>
@@ -31,7 +31,7 @@ const Navibar = () => {
       {user ? (
         <Dropdown>
           <Dropdown.Toggle variant="link" bsPrefix="p-0">
-          <img title={user.displayName} className="user-profile me-5" src={user.photoURL} alt="" />
+          <img title={user.displayName} className="user-profile me-5 mb-3" src={user.photoURL} alt="" />
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <Button
@@ -47,7 +47,7 @@ const Navibar = () => {
         
 
         <Link to="/">
-          <Button className="px-4 mx-4 mb-5" variant="warning">
+          <Button className="px-4 me-4 mb-5" variant="warning">
             Login
           </Button>
         </Link>

@@ -68,8 +68,8 @@ const Login = () => {
     }
     
   return (
-    <div className="d-flex flex-column justify-content-center">
-      <Container className="my-5 w-25 borderDesign rounded p-5">
+    <div className="d-flex flex-column justify-content-center mx-auto">
+      <Container className="my-5 mx-auto form-width borderDesign rounded p-5">
         <Form onSubmit={handleLogin}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>

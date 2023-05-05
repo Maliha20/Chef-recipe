@@ -20,7 +20,7 @@ const ChefCard = ({ chef }) => {
         </LazyLoad>
       </div>
       
-      <h3 className="fs-3 text-danger">{name}</h3>
+      <h3 className="fs-3 text-danger mt-4">{name}</h3>
       <h5>Years of experience: {years_of_experience}</h5>
       <h5 className="mb-3">Recipes Developed:{num_recipes}</h5>
       <div className="d-flex justify-content-between align-items-center">

@@ -4,10 +4,11 @@
     height: 300px;
 }
 
-/* @media only screen and (max-width:576px){
+
+@media only screen and (max-width:576px){
   
     .recipe-image{
-        width: 247px;
+        width: 302px;
         height: 300px;
     }
-} */
+}

@@ -57,7 +57,7 @@ const Blog = () => {
             scale={0.8}
           >
             {({ toPdf }) => (
-              <Button onClick={toPdf} variant="outline-info">
+              <Button className="dld-btn" onClick={toPdf} variant="outline-info">
                 Download <FaDownload></FaDownload>
               </Button>
             )}
@@ -68,7 +68,7 @@ const Blog = () => {
         <h2 className="text-center text-danger fs-2 fw-bold">Our Thoughts</h2>
         <Row className="my-4 ">
           <Col lg={6}>
-            <Card className="fixed-height">
+            <Card className="fixed-height mb-5">
               <Card.Img className="blog-img" variant="top" src={icon2} />
               <Card.Body>
                 <Card.Title className="fw-bold">
